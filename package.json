@@ -1,0 +1,14 @@
+{
+  "name": "banana_track",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "Lester Bassantes",
+  "license": "ISC",
+  "description": "BananaTrack es un aplicativo web diseñado para la gestión eficiente y seguimiento de contenedores de banano."
+}
