@@ -20,8 +20,12 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 {children}
+
                 {/* Bootstrap JS */}
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossOrigin="anonymous"></script>
+
+                {/* Sweet Alert JS*/}
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             </body>
         </html>
     )

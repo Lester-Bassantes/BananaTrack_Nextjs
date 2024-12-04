@@ -22,13 +22,19 @@ export default function SideNav() {
             {/* Opciones de navegación */}
             <ul className="nav flex-column px-3 my-2">
                 <li className="nav-item">
-                    <Link href="#" className="nav-link">Seguimiento</Link>
+                    <Link href="/dashboard/tracking" className="nav-link">Entrega de rastreo</Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="#" className="nav-link">Informacion</Link>
+                    <Link href="/dashboard/inspection" className="nav-link">Control e inspección</Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="#" className="nav-link">Auditoria</Link>
+                    <Link href="/dashboard/audit" className="nav-link">Auditoría de agricolas</Link>
+                </li>
+                <li className="nav-item">
+                    <Link href="/dashboard/monitoring" className="nav-link">Monitoreo y seguimiento</Link>
+                </li>
+                <li className="nav-item">
+                    <Link href="resourcesControl" className="nav-link">Control de recursos</Link>
                 </li>
             </ul>
 

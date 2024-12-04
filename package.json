@@ -10,5 +10,8 @@
   },
   "author": "Lester Bassantes",
   "license": "ISC",
-  "description": "BananaTrack es un aplicativo web diseñado para la gestión eficiente y seguimiento de contenedores de banano."
+  "description": "BananaTrack es un aplicativo web diseñado para la gestión eficiente y seguimiento de contenedores de banano.",
+  "dependencies": {
+    "@sequelize/mysql": "^7.0.0-alpha.43"
+  }
 }
