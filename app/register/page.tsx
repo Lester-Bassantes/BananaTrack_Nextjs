@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Form from "next/form";
+import { createNewUser } from "./storeNewUser";
 
 export default function Page() {
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-secondary-subtle">
-            <Form action="" className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
+            <Form action={createNewUser} className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
                 <div className="container-logo d-flex justify-content-center mb-4">
                     <Image
                         src="/images/Grupo-Palmar-Logotipo.png"
