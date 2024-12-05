@@ -1,13 +1,14 @@
-const { Sequelize } = require('sequelize');
+import { Sequelize } from '@sequelize/core';
+import { MySqlDialect } from '@sequelize/mysql';
 
-const sequelize = new Sequelize(
-    process.env.DATABASE_NAME,
-    process.env.DATABASE_USER,
-    process.env.DATABASE_PASSWORD, {
+const sequelize = new Sequelize({
+    dialect: MySqlDialect,
+    database: process.env.DATABASE_NAME,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
     host: process.env.DATABASE_HOST,
-    dialect: 'mssql'
-}
-);
+    port: 3306,
+});
 
 try {
     await sequelize.authenticate();

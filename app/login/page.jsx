@@ -4,7 +4,7 @@ import Form from "next/form";
 export default function Page() {
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-secondary-subtle">
-            <Form action="" className="bg-light p-4 col-3 animate__animated animate__fadeInLeft">
+            <Form action="" className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
                 <div className="container-logo d-flex justify-content-center mb-4">
                     <Image
                         src="/images/Grupo-Palmar-Logotipo.png"
@@ -29,8 +29,8 @@ export default function Page() {
                     <label htmlFor="boxRememberPass" className="form-check-label ms-1">Recordar contraseña</label>
                 </div>
 
-                <button className="btn btn-outline-success w-100" id="btnLogin">Ingresar</button>
+                <button type="submit" className="btn btn-outline-success w-100" id="btnLogin">Ingresar</button>
             </Form>
         </div>
-    )
+    );
 }
