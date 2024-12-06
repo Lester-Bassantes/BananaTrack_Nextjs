@@ -12,8 +12,9 @@
   "license": "ISC",
   "description": "BananaTrack es un aplicativo web diseñado para la gestión eficiente y seguimiento de contenedores de banano.",
   "dependencies": {
-    "@sequelize/mysql": "^7.0.0-alpha.43",
-    "bcrypt": "^5.1.1"
+    "bcrypt": "^5.1.1",
+    "mysql2": "^3.11.5",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
     "@types/react": "18.3.13",
