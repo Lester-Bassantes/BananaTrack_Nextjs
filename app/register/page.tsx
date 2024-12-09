@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Form from "next/form";
 import { createNewUser } from "./storeNewUser";
+import Swal from "sweetalert2";
 
 export default function Page() {
     return (
@@ -45,9 +46,7 @@ export default function Page() {
                 </div>
 
                 <button type="submit" className="btn btn-outline-primary w-100" id="btnRegister">Crear cuenta</button>
-
             </Form >
-
         </div >
     );
 }

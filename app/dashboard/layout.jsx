@@ -1,4 +1,4 @@
-import SideNav from "./sideNav";
+import SideNav from '../components/sideNav';
 
 export default function Layout({ children }) {
     return (

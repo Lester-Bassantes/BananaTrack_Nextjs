@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "./",
         "paths": {
-            "@controllers/*": [
-                "app/controllers/*"
+            "@/components/*": [
+                "app/components/*"
             ],
-            "@models/*": [
+            "@/models/*": [
                 "app/models/*"
             ]
         }
