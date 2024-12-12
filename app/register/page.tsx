@@ -17,17 +17,17 @@ export default function Page() {
                 </div>
 
                 <div className="form-floating mb-2">
-                    <input id="txtFirstName" name="txtFirstName" type="text" className="form-control" placeholder="Nombre" required />
+                    <input id="txtFirstName" name="txtFirstName" type="text" className="form-control" placeholder="Nombre" maxLength={25} required />
                     <label htmlFor="txtFirstName">Nombre</label>
                 </div>
 
                 <div className="form-floating mb-2">
-                    <input type="text" name="txtSecondName" id="txtSecondName" className="form-control" placeholder="Apellido" required />
+                    <input type="text" name="txtSecondName" id="txtSecondName" className="form-control" placeholder="Apellido" maxLength={25} required />
                     <label htmlFor="txtSecondName">Apellido</label>
                 </div>
 
                 <div className="form-floating mb-2">
-                    <input type="text" name="txtUsername" className="form-control" id="txtSUsername" placeholder="Usuario" required />
+                    <input type="text" name="txtUsername" className="form-control" id="txtSUsername" placeholder="Usuario" maxLength={25} required />
                     <label htmlFor="txtUsername">Nombre de usuario</label>
                 </div>
 

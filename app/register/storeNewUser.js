@@ -9,7 +9,7 @@ export async function createNewUser(formData) {
         txtUsername: formData.get('txtUsername'),
         dateBirthday: formData.get('dateBirthday'),
         txtPassword: formData.get('txtPassword'),
-        //txtPasswordConfirm: formData.get('txtPasswordConfirm')
+        txtPasswordConfirm: formData.get('txtPasswordConfirm')
     });
 
     if (!validatedFields.success) {

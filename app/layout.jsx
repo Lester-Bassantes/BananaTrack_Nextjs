@@ -2,6 +2,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
+                {/* Application icon*/}
+                <link rel="icon" href="/Grupo-Palmar-Logotipo.ico" />
+
                 {/* Bootstrap CSS */}
                 <link
                     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
