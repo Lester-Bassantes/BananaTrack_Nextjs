@@ -6,10 +6,6 @@ import Form from "next/form";
 import { createNewUser } from "./storeNewUser";
 import Swal from "sweetalert2";
 
-const initialState = {
-    message: '',
-}
-
 export default function Page() {
     const [message, formAction] = useActionState(createNewUser, null);
     if (message === "No se puedo ingresar el usuario") {

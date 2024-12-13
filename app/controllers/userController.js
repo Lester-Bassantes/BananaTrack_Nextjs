@@ -21,3 +21,11 @@ export async function createUser(user) {
         return { success: false, message: 'Error al crear el usuario', error: error.message };
     }
 }
+
+export async function searchUserByUsername(username) {
+    const user = await User.findOne({
+        where: { user_username: username }
+    });
+
+    return user;
+}

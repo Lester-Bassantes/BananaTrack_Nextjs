@@ -1,10 +1,18 @@
+'use client'
+
+import { useActionState } from 'react';
 import Image from "next/image";
 import Form from "next/form";
+import { login } from './checkLogin';
+import Swal from "sweetalert2";
 
 export default function Page() {
+
+    const [message, formAction] = useActionState(login, null);
+
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-secondary-subtle">
-            <Form action="" className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
+            <Form action={formAction} className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
                 <div className="container-logo d-flex justify-content-center mb-4">
                     <Image
                         src="/images/Grupo-Palmar-Logotipo.png"
@@ -15,7 +23,7 @@ export default function Page() {
                 </div>
 
                 <div className="form-floating mb-4">
-                    <input id="txtUsername" name="txtUsuario" type="text" className="form-control" placeholder="Usuario" required />
+                    <input id="txtUsername" name="txtUsername" type="text" className="form-control" placeholder="Usuario" required />
                     <label htmlFor="txtUsername">Usuario</label>
                 </div>
 
