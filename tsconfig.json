@@ -21,14 +21,20 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["app/components/*"],
+      "@/controllers/*": ["app/controllers/*"],
+      "@/models/*": ["app/models/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/register/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

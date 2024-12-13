@@ -1,12 +1,36 @@
+'use client'
+
+import { useActionState } from 'react';
 import Image from "next/image";
 import Form from "next/form";
 import { createNewUser } from "./storeNewUser";
 import Swal from "sweetalert2";
 
+const initialState = {
+    message: '',
+}
+
 export default function Page() {
+    const [message, formAction] = useActionState(createNewUser, null);
+    if (message === "No se puedo ingresar el usuario") {
+        Swal.fire({
+            title: "Error",
+            text: "No se pudo crear el usuario",
+            icon: "error"
+        });
+    }
+
+    if (message === "Usuario creado correctamente") {
+        Swal.fire({
+            title: "Correcto",
+            text: "Usuario creado correctamente",
+            icon: "success"
+        });
+    }
+
     return (
         <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 bg-secondary-subtle">
-            <Form action={createNewUser} className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
+            <Form action={formAction} className="bg-light p-4 col-3 animate__animated animate__fadeInLeft rounded-4">
                 <div className="container-logo d-flex justify-content-center mb-4">
                     <Image
                         src="/images/Grupo-Palmar-Logotipo.png"
@@ -32,7 +56,7 @@ export default function Page() {
                 </div>
 
                 <div className="form-floating mb-2">
-                    <input type="date" name="dateBirthday" id="dateBirthday" className="form-control" />
+                    <input type="date" name="dateBirthday" id="dateBirthday" className="form-control" required />
                 </div>
 
                 <div className="form-floating mb-2">
@@ -44,8 +68,7 @@ export default function Page() {
                     <input type="password" name="txtPasswordConfirm" id="txtPasswordConfirm" className="form-control" placeholder="Confirmar contraseña" required />
                     <label htmlFor="txtPasswordConfirm">Confirmar contraseña</label>
                 </div>
-
-                <button type="submit" className="btn btn-outline-primary w-100" id="btnRegister">Crear cuenta</button>
+                <button type="submit" className="btn btn-outline-primary w-100" id="btnRegister" >Crear cuenta</button>
             </Form >
         </div >
     );

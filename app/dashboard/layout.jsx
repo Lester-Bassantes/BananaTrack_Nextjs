@@ -6,7 +6,7 @@ export default function Layout({ children }) {
             {/* Sidebar */}
             <SideNav />
 
-            {/* Contenido principal */}
+            {/* Main */}
             <div className="flex-grow-1 p-4">
                 {children}
             </div>

@@ -9,5 +9,9 @@
                 "app/models/*"
             ]
         }
-    }
+    },
+    "include": [
+        "app/**/*.js",
+        "app/**/*.jsx"
+    ]
 }

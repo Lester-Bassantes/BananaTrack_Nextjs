@@ -2,7 +2,8 @@
 
 import { createUser } from '../controllers/userController';
 import { SignupFormSchema } from '../lib/registerDefinitions';
-export async function createNewUser(formData) {
+
+export async function createNewUser(prevState, formData) {
     const validatedFields = SignupFormSchema.safeParse({
         txtFirstName: formData.get('txtFirstName'),
         txtSecondName: formData.get('txtSecondName'),
@@ -13,9 +14,10 @@ export async function createNewUser(formData) {
     });
 
     if (!validatedFields.success) {
-        return {
+        /* return {
             errors: validatedFields.error.flatten().fieldErrors,
-        }
+        } */
+        return "No se puedo ingresar el usuario"
     }
 
     const user = {
@@ -27,4 +29,5 @@ export async function createNewUser(formData) {
     }
 
     createUser(user);
+    return "Usuario creado correctamente";
 }

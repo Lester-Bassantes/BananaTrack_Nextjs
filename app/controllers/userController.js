@@ -4,7 +4,10 @@ import bcrypt from 'bcrypt';
 export async function createUser(user) {
     try {
         const { user_name, user_second_name, user_username, user_birthday, user_password } = user;
+
+        // Encrypt password
         const hashedPassword = await bcrypt.hash(user_password, 10);
+
         const newUser = await User.create({
             user_name,
             user_second_name,
@@ -12,9 +15,9 @@ export async function createUser(user) {
             user_birthday,
             user_password: hashedPassword,
         });
-        return Response.status(200).json({ message: 'Usuario creado exitosamente' });
+        return { success: true, message: 'Usuario creado exitosamente', data: newUser };
     } catch (error) {
         console.error(error);
-        return Response.status(500).json({ message: 'Error al crear el usuario' });
+        return { success: false, message: 'Error al crear el usuario', error: error.message };
     }
 }
